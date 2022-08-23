@@ -12,7 +12,6 @@ export default {
   docsRepositoryBase: github,
   projectLink: "https://github.com/Ankr-network/",
   titleSuffix: "— Ankr",
-// unstable_faviconGlyph: "⚓️",
   unstable_flexsearch: true,
   floatTOC: true,
   defaultMenuCollapsed: true,
@@ -29,8 +28,8 @@ export default {
       meta.description || "Ankr is a leading Web3 Infrastructure Company";
     const title_ =
       title && !title.startsWith("Ankr")
-        ? title
-        : "Ankr The Web3 Infrastructure Company";
+        ? "Ankr — " + title
+        : "Ankr — The Web3 Infrastructure Company";
 
     return (
       <>
