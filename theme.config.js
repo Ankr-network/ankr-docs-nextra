@@ -98,68 +98,76 @@ export default {
   footerText: (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:space-x-16 lg:space-x-28">
       <div className="flex flex-col">
-        MIT {new Date().getFullYear()} © Ankr
+        © {new Date().getFullYear()} Ankr All rights reserved
       </div>
       <div className="flex flex-col">
         <div className="text-current font-bold pb-3">Products</div>
         <a
-          href="https://www.ankr.com/build/nodes/"
+          href="https://www.ankr.com/rpc"
           target="_blank"
           rel="noopener"
           className="no-underline text-current font-semibold"
         >
-          Node Service
+          RPC Service
         </a>
         <a
-          href="https://www.ankr.com/staking/"
+          href="https://www.ankr.com/advanced-api/"
           target="_blank"
           rel="noopener"
           className="no-underline text-current font-semibold"
         >
-          Ankr Staking
+          Advanced APIs/SDKs
         </a>
         <a
-          href="https://www.ankr.com/ankr-protocol/"
+          href="https://www.ankr.com/gaming/"
           target="_blank"
           rel="noopener"
           className="no-underline text-current font-semibold"
         >
-          Ankr Protocol
+          Gaming SDKs
+        </a>
+        <a
+          href="https://www.ankr.com/app-chains/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          App Chains
+        </a>
+        <a
+          href="https://www.ankr.com/about-staking/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Liquid Staking
+        </a>
+        <a
+          href="https://ankrscan.io/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Ankr Scan
+        </a>
+        <a
+          href="https://www.ankr.com/enterprise/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Enterprise Solutions
         </a>
       </div>
       <div className="flex flex-col">
-        <div className="text-current font-bold pb-3">About us</div>
-        <a
-          href="https://www.ankr.com/docs/learn/reference/ankr-vision"
-          target="_blank"
-          rel="noopener"
-          className="no-underline text-current font-semibold"
-        >
-          Our Vision
-        </a>
+        <div className="text-current font-bold pb-3">Company</div>
         <a
           href="https://www.ankr.com/about/our-purpose/"
           target="_blank"
           rel="noopener"
           className="no-underline text-current font-semibold"
         >
-          Our Story
-        </a>
-        <a
-          href="https://www.ankr.com/about/careers/"
-          target="_blank"
-          rel="noopener"
-          className="no-underline text-current font-semibold"
-        >
-          Careers
-        </a>
-        <a
-          href="https://www.ankr.com/about/team/"
-          target="_blank"
-          rel="noopener"
-          className="no-underline text-current font-semibold"
-        >
-          Team
+          About Us
         </a>
         <a
           href="https://medium.com/ankr-network"
@@ -167,7 +175,23 @@ export default {
           rel="noopener"
           className="no-underline text-current font-semibold"
         >
-          Community
+          Blog
+        </a>
+        <a
+          href="https://boards.greenhouse.io/ankrnetwork"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Careers
+        </a>
+        <a
+          href="https://www.ankr.com/assets/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Brand Assets
         </a>
       </div>
       <div className="flex flex-col">
@@ -211,6 +235,14 @@ export default {
           className="no-underline text-current font-semibold"
         >
           Reddit
+        </a>
+        <a
+          href="https://www.instagram.com/ankr/"
+          target="_blank"
+          rel="noopener"
+          className="no-underline text-current font-semibold"
+        >
+          Instagram
         </a>
       </div>
     </div>
