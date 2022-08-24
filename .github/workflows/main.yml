@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
 
-      - run: npm install
-      - run: npm run build
+      # - run: npm install
+      # - run: npm run build
 
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
@@ -22,11 +22,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: unnecessary
 
-      - name: Adding Known Hosts
-        run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+      # - name: Adding Known Hosts
+      #   run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/zellwk.com/
+        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ec2-user/ankr-docs-nextra
 
       - name: Restart Node Server
         uses: appleboy/ssh-action@master
@@ -40,6 +40,7 @@ jobs:
             git fetch origin master
             git reset --hard FETCH_HEAD
             git clean -d -f --exclude secrets
-            npm install --production
+            yarn 
             chown $(whoami) . # PM2 doesn't recognize root user from Github Actions
-            npm run restart
+            yarn install
+            yarn next
