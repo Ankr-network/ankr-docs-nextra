@@ -32,10 +32,5 @@ jobs:
           script: |
             cd /home/ec2-user/ankr-docs-nextra
             chown $(whoami) . 
-            yarn 
-            yarn install
-            echo "Stop yarn server"
-            ps ax|grep yarn|awk '{print $1}'|xargs kill || true
-            echo "Running server in the background"
-            yarn next &
-            echo "NextJS server started."
+            docker-compose down || true
+            docker-compose build && docker-compose up -d
