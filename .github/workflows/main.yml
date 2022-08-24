@@ -31,10 +31,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /home/ec2-user/ankr-docs-nextra
-            git fetch origin master
-            git reset --hard FETCH_HEAD
-            git clean -d -f --exclude secrets
-            chown $(whoami) . # PM2 doesn't recognize root user from Github Actions
+            chown $(whoami) . 
             yarn 
             yarn install
             echo "Stop yarn server"
