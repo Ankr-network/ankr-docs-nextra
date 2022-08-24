@@ -26,7 +26,7 @@ jobs:
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: rsync --delete -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ec2-user/ankr-docs-nextra
+        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ec2-user/ankr-docs-nextra
 
       - name: Restart Node Server
         uses: appleboy/ssh-action@master
